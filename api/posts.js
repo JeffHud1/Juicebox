@@ -73,7 +73,7 @@ postRouter.patch('/:postId', requireUser, async (req, res, next)=>{
     }
 })
 
-postRouter.get('/', async (req, res) =>{
+postRouter.get('/', async (req, res, next) =>{
     try{
         const allPosts = await getAllPosts();
 
